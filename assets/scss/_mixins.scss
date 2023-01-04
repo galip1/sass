@@ -1,5 +1,21 @@
 @mixin reset-list {
   list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+}
+
+@mixin flex($jc: space-between, $fd: column, $gap: 0, $ai: stretch) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  gap: $gap;
+}
+
+@mixin bg($key, $value) {
+  background-#{$key}: $value;
+}
+
+@mixin size {
+  font-size: 0.8rem;
 }
